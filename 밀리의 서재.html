@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밀리의서재</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #55555596;
+        }
+
+        .wrap {
+            width: 402px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+
+        .wrap .section-01 {
+            padding: 16px 0;
+        }
+
+        .section-01 .logo {
+            width: 50px;
+            margin: 0 0 16px 16px;
+        }
+
+        .section-01 .text {
+            margin: 0 0 10px 16px;
+            color: #333;
+        }
+
+        .section-01 ul {
+            list-style: none;
+            display: flex;
+            column-gap: 16px;
+        }
+
+        .section-02 {
+            width: 370px;
+            margin: 0 auto;
+        }
+
+        .section-02 .text {
+            margin-top: 49px;
+        }
+
+        .section-02 .text h1 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .section-02 .text p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .section-02 img {
+            margin: 17px 0 8px 0;
+        }
+
+        .section-02 strong {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .section-03 {
+            width: 370px;
+            margin: 0 auto;
+        }
+
+        .section-03 .top-text {
+            margin: 65px 0 16px 0;
+
+        }
+
+        .section-03 .top-text h1 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .section-03 .top-text p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .section-03 .box {
+            background-color: #eeeeee;
+            border-radius: 25px;
+        }
+
+        .section-03 .box .item_wrap {
+            padding: 20px;
+        }
+
+        .section-03 .box .item_wrap .item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .section-03 .box .item_wrap .item img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .section-03 .box .item_wrap .item .text {
+            margin-left: 10px;
+        }
+
+        .section-03 .box .item_wrap .item .text h2 {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .section-03 .box .item_wrap .item .text p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .section-03 .box .item_wrap span {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .section-04 {
+            width: 370px;
+            margin: 0 auto;
+        }
+
+        .section-04 .top-text {
+            margin: 65px 0 16px 0;
+        }
+
+        .section-04 .top-text h1 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .section-04 .top-text p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .section-04 .box {
+            background-color: #eeeeee;
+            border-radius: 25px;
+        }
+
+        .section-04 .box .item_wrap {
+            padding: 20px;
+        }
+
+        .section-04 .box .item_wrap h2 {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .section-04 .box .item_wrap p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .section-04 .box .item_wrap .item {
+            display: flex;
+            align-items: center;
+            margin-top: 32px;
+        }
+
+        .section-04 .box .item_wrap .item span {
+            font-size: 14px;
+            color: #555;
+            margin-left: 4px;
+        }
+
+        .section-05 {
+            width: 370px;
+            background-color: #eeeeee;
+            border-radius: 25px;
+            margin: 65px auto;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-05 span {
+            font-size: 14px;
+            color: #555;
+            margin-left: 4px;
+        }
+
+        .section-06 {
+            width: 370px;
+            margin: 0 auto;
+            padding-bottom: 100px;
+        }
+
+        .section-06 h1 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 16px;
+        }
+
+        .section-06 .item_wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section-06 .item_wrap .item img {
+            height: 240px;
+            margin-bottom: 12px;
+        }
+
+        .section-06 .item_wrap .item h2 {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .section-06 .item_wrap .item p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .section-07 {
+            width: 370px;
+            margin: 0 auto;
+        }
+
+        .section-07 h1 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .section-07 p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 16px;
+        }
+
+        .section-08 {
+            width: 370px;
+            margin: 65px auto;
+        }
+
+        .section-08 h1 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .section-08 .category {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            margin: 16px 0 32px 0;
+        }
+
+        .section-08 .category li {
+            border: 1px solid #555;
+            border-radius: 25px;
+            height: 28px;
+            text-align: center;
+            line-height: 28px;
+            padding: 3px 7px;
+            color: #555;
+        }
+
+        .section-08 .category li:first-child {
+            border: 2px solid black;
+            color: #333;
+        }
+
+        .section-08 .item_wrap {
+            padding-left: 10px;
+        }
+
+        .section-08 .item_wrap .item {
+            display: flex;
+            margin-bottom: 16px;
+            column-gap: 16px;
+            align-items: center;
+        }
+
+        .section-08 .item_wrap .item .text h2 {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .section-08 .item_wrap .item .text span {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .section-08 .item_wrap .item .text ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-bottom: 4px;
+        }
+
+        .section-08 .item_wrap .item .text ul li {
+            color: #a95bf7;
+        }
+
+        .section-08 .item_wrap .item .text ul li:first-child {
+            border: 2px solid #a95bf7;
+            border-radius: 25px;
+            text-align: center;
+            padding: 2px 4px;
+        }
+
+        .section-09 {
+            background-color: #e6e6e6;
+        }
+
+        .section-09 .inner {
+            width: 370px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .section-09 .inner .top-text h1 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .section-09 .inner .top-text span {
+            color: #a95bf7;
+        }
+
+        .section-09 .inner .box {
+            background-color: #f9f8f8;
+            border-radius: 10px;
+            margin: 16px 0;
+        }
+
+        .section-09 .inner .box span {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .section-09 .inner .box .text {
+            width: 280px;
+            height: 390px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 44px 0;
+        }
+
+        .section-09 .inner .box img {
+            margin: 16px 0;
+        }
+
+        .section-09 .inner .box h2 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .section-09 .inner .box p {
+            font-size: 16px;
+            color: #555;
+            margin-top: 8px;
+        }
+
+        .section-09 .inner .bottom {
+            background-color: #f9f8f8;
+            border-radius: 30px;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .section-09 .inner .bottom p {
+            color: #333;
+        }
+
+        .section-10 {
+            width: 370px;
+            margin: 0 auto;
+            padding: 65px 0;
+        }
+
+        .section-10 h1 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .section-10 span {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .section-10 img {
+            margin: 16px 0;
+        }
+
+        .section-10 p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .section-11 {
+            width: 370px;
+            margin: 0 auto;
+            padding-bottom: 65px;
+        }
+
+        .section-11 .top-text {
+            margin-bottom: 16px;
+        }
+
+        .section-11 .top-text h1 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .section-11 .top-text p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .section-11 .box {
+            background-color: #eeeeee;
+            border-radius: 25px;
+        }
+
+        .section-11 .box .item_wrap {
+            padding: 20px;
+        }
+
+        .section-11 .box .item_wrap .item {
+            display: flex;
+            align-items: center;
+        }
+
+        .section-11 .box .item_wrap .item img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .section-11 .box .item_wrap .item .text {
+            margin-left: 4px;
+        }
+
+        .section-11 .box .item_wrap .item .text h2 {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .section-11 .box .item_wrap .item .text span {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .section-11 .box .item_wrap p {
+            font-size: 14px;
+            color: #333;
+            border-bottom: 1px solid #999;
+            padding-bottom: 16px;
+            width: 310px;
+            margin: 16px auto 0;
+        }
+
+        .section-11 .box .item_wrap .bottom-text {
+            width: 310px;
+            font-size: 14px;
+            color: #555;
+            margin: 16px auto 0;
+        }
+
+        .section-11 .box .item_wrap .bottom-text li {
+            list-style: none;
+        }
+
+        .section-12 {
+            width: 370px;
+            margin: 0 auto;
+        }
+        .section-12 h1 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .section-12 .top-box {}
+        .section-12 .top-box .text {}
+        .section-12 .top-box .text span {}
+        .section-12 .top-box .text h2 {}
+        .section-12 .top-box span {}
+        .section-12 .bottom-box {}
+        .section-12 .bottom-box h2 {}
+        .section-12 .bottom-box span {}
+        .section-12 .item_wrap {}
+        .section-12 .item_wrap .top-text h2 {}
+        .section-12 .item_wrap .top-text span {}
+        .section-12 .item_wrap .box {}
+        .section-12 .item_wrap .box .item {}
+        .section-12 .item_wrap .box .item img {}
+        .section-12 .item_wrap .box .item p {}
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <div class="section-01">
+            <div class="logo">
+                <img src="img/밀리의서재/logo.png" alt="">
+            </div><!-- logo end -->
+
+            <div class="text">
+                <ul>
+                    <li><strong>NOW</strong></li>
+                    <li>밀리로드</li>
+                    <li>스토리</li>
+                    <li>오디오북</li>
+                </ul>
+            </div><!-- text end -->
+            <img src="img/밀리의서재/Layer 5.png" alt="">
+
+        </div><!-- section-01 end -->
+
+        <div class="section-02">
+            <div class="text">
+                <h1>올타임 레전드</h1>
+                <p>베스트 중의 베스트, 한번에 모아봤어요</p>
+            </div><!-- text end -->
+
+            <img src="img/밀리의서재/Layer 4.png" alt="">
+            <strong>2024년 밀리 회원들이 가장 사랑한 책 7선</strong>
+        </div><!-- section-02 end -->
+
+        <div class="section-03">
+            <div class="top-text">
+                <h1>오늘 읽어야 할 단 한 권</h1>
+                <p>02월 04일 화요일 업데이트</p>
+            </div><!-- text end -->
+
+            <div class="box">
+                <img src="img/밀리의서재/Layer 3.png" alt="">
+
+                <div class="item_wrap">
+
+                    <div class="item">
+                        <img src="img/밀리의서재/로라의선택.png" alt="">
+                        <div class="text">
+                            <h2>예쁜 문장 수집가 콘텐츠 매니저</h2>
+                            <p>로라의 선택</p>
+                        </div>
+                    </div><!-- item end -->
+
+                    <span>“상대가 나에게 속마음을 털어놓게 하고 싶으면, 이 책을 당장
+                        열어보세요! 단 5분 안에 신뢰관계로 만드는 방법을 알 수 있
+                        어요”</span>
+                </div><!-- item_wrap end -->
+
+            </div><!-- box end -->
+
+        </div><!-- section-03 end -->
+
+        <div class="section-04">
+
+            <div class="top-text">
+                <h1>이것만 읽어도 책책박사</h1>
+                <p>독서 트렌드 여기서 볼 수 있어요</p>
+            </div><!-- top-text end -->
+
+            <div class="box">
+                <img src="img/밀리의서재/책책박사.png" alt="">
+                <div class="item_wrap">
+                    <h2>지난 달, 밀리 별점이 가장 높았던 책 BEST5</h2>
+                    <p>푸른 뱀의 해, 2025년이 시작된 지도 벌써 한 달이 지나...</p>
+
+                    <div class="item">
+                        <img src="img/밀리의서재/밀리의이미지.png" alt="">
+                        <span>밀리 독서연구소</span>
+                    </div><!-- item end -->
+
+                </div><!-- item_wrap end -->
+
+            </div><!-- box end -->
+        </div><!-- section-04 end -->
+
+        <div class="section-05">
+            <img src="img/밀리의서재/추천책이미지.png" alt="">
+            <span>어떤 책을 추천받고 싶나요?</span>
+        </div><!-- section-05 end -->
+
+        <div class="section-06">
+            <h1>밀리 오리지널 로맨스</h1>
+
+            <div class="item_wrap">
+
+                <div class="item">
+                    <img src="img/밀리의서재/Layer 2.png" alt="">
+                    <h2>[독점] 여름이 돌아오면</h2>
+                    <p>송민선</p>
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/밀리의서재/Layer 1.png" alt="">
+                    <h2>[독점] 라일락 눈꽃</h2>
+                    <p>나자혜</p>
+                </div><!-- item end -->
+
+            </div><!-- item_wrap end -->
+
+        </div><!-- section-06 end -->
+
+        <div class="section-07">
+            <h1>인기도서로 시작하는 밀리 페어링</h1>
+            <p>종이책부터 AI TTS까지. 읽던 지점 그대로</p>
+            <img src="img/밀리의서재/olia-gozha-J4kK8b9Fgj8-unsplash.png" alt="">
+        </div><!-- section-07 end -->
+
+        <div class="section-08">
+            <h1>밀리 랭킹</h1>
+
+            <div class="category">
+                <li><b>종합</b></li>
+                <li>소설</li>
+                <li>경제/경영</li>
+                <li>자기계발</li>
+                <li>시/에세이</li>
+            </div><!-- category end -->
+
+            <div class="item_wrap">
+
+                <div class="item">
+                    <img src="img/밀리의서재/Layer 7.png" alt="">
+                    <div class="text">
+                        <ul>
+                            <li>오디오북</li>
+                            <li><b>김태리</b></li>
+                        </ul>
+                        <h2>바깥은 여름</h2>
+                        <span>김애란</span>
+                    </div><!-- text end -->
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/밀리의서재/Layer 8.png" alt="">
+                    <div class="text">
+                        <h2>초역 부처의 말</h2>
+                        <span>코이케 류노스케</span>
+                    </div><!-- text end -->
+                </div><!-- item end -->
+
+                <div class="item">
+                    <img src="img/밀리의서재/Layer 7.png" alt="">
+                    <div class="text">
+                        <h2>바깥은 여름</h2>
+                        <span>김애란</span>
+                    </div><!-- text end -->
+                </div><!-- item end -->
+
+            </div><!-- item_wrap end -->
+
+        </div><!-- section-08 end -->
+
+        <div class="section-09">
+            <div class="inner">
+                <div class="top-text">
+                    <h1><span>토론하는 소보로빵_94193</span> 님, 밀리에는 다양한
+                        독립출판물도 있어요!</h1>
+                </div><!-- top-text end -->
+
+                <div class="box">
+                    <div class="text">
+                        <span>서재 담은 수 <b>1만+</b></span>
+                        <img src="img/밀리의서재/Layer 9.png" alt="">
+                        <h2>멋 : 스트리트 패션 오브 서울</h2>
+                        <p>김동현</p>
+                    </div><!-- text end -->
+                </div><!-- box end -->
+
+                <div class="bottom">
+                    <p>새로운 추천 보기</p>
+                </div><!-- bottom end -->
+
+            </div><!-- inner end -->
+        </div><!-- section-09 end -->
+
+        <div class="section-10">
+            <h1>올타임 레전드</h1>
+            <span>베스트 중의 베스트, 한번에 모아봤어요</span>
+            <img src="img/밀리의서재/Layer 10.png" alt="">
+            <p>과학 전문가 선정 반드시 읽어야 할 과학 책 10선</p>
+        </div><!-- section-10 end -->
+
+        <div class="section-11">
+
+            <div class="top-text">
+                <h1>오늘 읽어야 할 단 한 권</h1>
+                <p>02월 05일 수요일 업데이트</p>
+            </div><!-- top-text end -->
+
+            <div class="box">
+                <img src="img/밀리의서재/Layer 11.png" alt="">
+
+                <div class="item_wrap">
+
+                    <div class="item">
+                        <img src="img/밀리의서재/로라의선택.png" alt="">
+                        <div class="text">
+                            <h2>궁금한 게 많은 에디터</h2>
+                            <span>루이스의 선택</span>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+
+                    <p>정답 찾기에 급급한 세상을 살다 보면 ‘나’를 잃어가는 것만
+                        같죠. 이 책은 예기치 못한 사건으로 가득한 내 삶이 얼마나
+                        경이로운지 느끼게 해줘요</p>
+
+                    <div class="bottom-text">
+                        <li>세상에서 가장 로맨틱한 과학책</li>
+                        <li>끝까지 읽어야 경험할 수 있는 감동</li>
+                    </div><!-- bottom-text end -->
+
+                </div><!-- item_wrap end -->
+            </div><!-- box end -->
+
+        </div><!-- section-11 end -->
+
+        <div class="section-12">
+            <h1>밀리와 함께 <span style="color: #ac61f7;">79</span>일 <span style="color: #ac61f7;">1</span>밀리</h1>
+
+            <div class="top-box">
+                <div class="text">
+                    <span>진행중</span>
+                    <h2>79일째 1밀리</h2>
+                </div><!-- text end -->
+                <span>2024.11.18 ~ 2025.02.26 100일 100밀리</span>
+            </div><!-- top-box end -->
+
+            <div class="bottom-box">
+                <h2>신규 배지 수집</h2>
+                <span>밀리 주민증</span>
+            </div><!-- bottom-box end -->
+
+            <div class="item_wrap">
+                <div class="top-text">
+                    <h2>즐거운 독서 생활</h2>
+                    <span>더 알아보기</span>
+                </div><!-- top-text end -->
+
+                <div class="box">
+
+                    <div class="item">
+                        <img src="img/밀리의 서재/Layer 12.png" alt="">
+                        <p>읽을 책 고르기</p>
+                    </div><!-- item end -->
+
+                    <div class="item">
+                        <img src="img/밀리의 서재/Layer 13.png" alt="">
+                        <p>읽을 책 고르기</p>
+                    </div><!-- item end -->
+
+                    <div class="item">
+                        <img src="img/밀리의 서재/Layer 14.png" alt="">
+                        <p>읽을 책 고르기</p>
+                    </div><!-- item end -->
+
+                </div><!-- box end -->
+            </div><!-- item_wrap end -->
+        </div><!-- section-12 -->
+    </div><!-- wrap end -->
+</body>
+
+</html>
